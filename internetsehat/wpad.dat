@@ -1,0 +1,20 @@
+function FindProxyForURL(url, host)
+{
+    // Direct access to localhost
+    if (isInNet(host, "127.0.0.1", "255.255.255.255"))
+        return "DIRECT";
+
+    // Direct access to local hosts
+    if (isPlainHostName(host))
+        return "DIRECT";
+
+
+
+    // eno1:192.168.88.0 green transparent_ssl
+    if (isInNet(myIpAddress(), "192.168.88.0", "255.255.255.252"))
+        return "DIRECT";
+
+
+    // DEFAULT
+    return "PROXY 192.168.88.1:3128";
+}
