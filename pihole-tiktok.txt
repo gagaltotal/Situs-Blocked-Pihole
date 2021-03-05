@@ -44,3 +44,4 @@
 0.0.0.0 akamai.net
 0.0.0.0 isnssdk.com
 0.0.0.0 www.tiktok.com
+tiktok.com
